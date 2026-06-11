@@ -132,7 +132,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-2 text-sm text-foreground/60">
                 <MapPin size={16} className="mt-0.5 flex-shrink-0" />
-                <span>5 St. Pauls Avenue, Slough, Berkshire, SL2 5EX, UK</span>
+                <span>5 St. Pauls Avenue, Slough, Berkshire, United Kingdom, SL2 5EX</span>
               </div>
             </div>
           </motion.div>
