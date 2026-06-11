@@ -11,7 +11,7 @@ export function CTASection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="glass rounded-3xl p-12 md:p-20 text-center relative overflow-hidden"
+        className="bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl rounded-3xl p-12 md:p-20 text-center relative overflow-hidden"
       >
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">

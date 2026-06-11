@@ -38,7 +38,7 @@ export function HeroSection() {
       >
         {/* Badge */}
         <motion.div variants={item} className="mb-8 flex justify-center">
-          <div className="glass-sm px-4 py-2 inline-block">
+          <div className="bg-white/[0.08] backdrop-blur-[30px] border border-white/[0.12] rounded-xl px-4 py-2 inline-block">
             <p className="text-sm font-medium text-primary">
               Premium Digital Solutions
             </p>
@@ -88,7 +88,7 @@ export function HeroSection() {
           variants={item}
           className="relative"
         >
-          <div className="glass rounded-3xl p-8 overflow-hidden">
+          <div className="bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl rounded-3xl p-8 overflow-hidden">
             <div className="relative w-full h-96 rounded-2xl bg-gradient-to-b from-primary/20 to-transparent overflow-hidden">
               <Image
                 src="/hero-showcase.png"
@@ -99,7 +99,7 @@ export function HeroSection() {
               />
             </div>
           </div>
-          <div className="absolute -bottom-4 -right-4 w-40 h-40 glass rounded-2xl glow-effect -z-10"></div>
+          <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl rounded-2xl glow-effect -z-10"></div>
         </motion.div>
       </motion.div>
     </section>

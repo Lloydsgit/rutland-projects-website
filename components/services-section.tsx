@@ -100,7 +100,7 @@ export function ServicesSection() {
               onMouseLeave={() => setHoveredIndex(null)}
               className="group"
             >
-              <div className="glass-card">
+              <div className="bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl p-6 hover:bg-white/[0.12] transition-all duration-300 group">
                 <div className="flex items-start justify-between mb-4">
                   <div className="p-3 glass-sm">
                     <Icon size={24} className="text-primary group-hover:text-accent transition-colors" />

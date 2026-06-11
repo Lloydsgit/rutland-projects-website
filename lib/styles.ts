@@ -1,0 +1,8 @@
+export const glassClasses = 'bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl'
+export const glassSmClasses = 'bg-white/[0.08] backdrop-blur-[30px] border border-white/[0.12] rounded-xl'
+export const glassCardClasses = 'bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl p-6 hover:bg-white/[0.12] transition-all duration-300 group'
+export const gradientTextClasses = 'bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent'
+export const premiumButtonClasses = 'px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg'
+export const premiumButtonPrimaryClasses = 'px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg bg-primary text-primary-foreground hover:bg-accent'
+export const premiumButtonSecondaryClasses = 'px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl text-foreground hover:bg-white/[0.15]'
+export const sectionContainerClasses = 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'

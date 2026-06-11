@@ -26,7 +26,7 @@ export function Navigation() {
       transition={{ duration: 0.5 }}
       className="fixed top-0 w-full z-50"
     >
-      <div className="glass mx-4 mt-4 rounded-2xl border-b-0">
+      <div className="bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl mx-4 mt-4 border-b-0">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">

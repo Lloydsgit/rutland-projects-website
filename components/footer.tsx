@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Share2, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react'
+import { Share2, Briefcase, Send, Mail, Phone, MapPin } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const footerLinks = {
@@ -64,13 +64,13 @@ export function Footer() {
               Engineering digital experiences that move businesses forward.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="p-2 glass hover:bg-white/[0.12] rounded-lg transition-all duration-300">
-                <Linkedin size={18} className="text-primary" />
+              <a href="#" className="p-2 bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl hover:bg-white/[0.12] rounded-lg transition-all duration-300">
+                <Briefcase size={18} className="text-primary" />
               </a>
-              <a href="#" className="p-2 glass hover:bg-white/[0.12] rounded-lg transition-all duration-300">
-                <Twitter size={18} className="text-primary" />
+              <a href="#" className="p-2 bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl hover:bg-white/[0.12] rounded-lg transition-all duration-300">
+                <Send size={18} className="text-primary" />
               </a>
-              <a href="#" className="p-2 glass hover:bg-white/[0.12] rounded-lg transition-all duration-300">
+              <a href="#" className="p-2 bg-white/[0.08] backdrop-blur-[40px] border border-white/[0.12] rounded-2xl hover:bg-white/[0.12] rounded-lg transition-all duration-300">
                 <Share2 size={18} className="text-primary" />
               </a>
             </div>
