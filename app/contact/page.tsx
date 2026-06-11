@@ -86,7 +86,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold mb-1">Phone</h3>
                 <a href="tel:+441753" className="text-foreground/60 hover:text-primary transition-colors">
-                  +44 (0) 1753 XXXXXX
+                  +44 7575 509767
                 </a>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold mb-1">Email</h3>
                 <a href="mailto:hello@rutlandprojects.co.uk" className="text-foreground/60 hover:text-primary transition-colors">
-                  hello@rutland.co.uk
+                  info@rutlandprojects.com
                 </a>
               </div>
             </div>
