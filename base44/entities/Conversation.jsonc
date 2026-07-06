@@ -1,0 +1,59 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Conversation title"
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "general",
+        "osint",
+        "cyber",
+        "content",
+        "anime",
+        "strategy",
+        "research",
+        "code",
+        "intelligence",
+        "personal"
+      ],
+      "default": "general"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "archived",
+        "pinned"
+      ],
+      "default": "active"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Last message or outcome summary"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "operator",
+        "mentor",
+        "combat",
+        "companion",
+        "sentinel"
+      ],
+      "default": "operator"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

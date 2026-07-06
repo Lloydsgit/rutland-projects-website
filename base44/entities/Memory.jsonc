@@ -1,0 +1,47 @@
+{
+  "name": "Memory",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "goal",
+        "milestone",
+        "workflow",
+        "preference",
+        "research",
+        "decision",
+        "note"
+      ],
+      "default": "note"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "importance": {
+      "type": "number",
+      "default": 5,
+      "description": "1-10"
+    },
+    "source_conversation": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}

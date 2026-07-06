@@ -1,0 +1,104 @@
+{
+  "name": "BrowserWorkspace",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tabs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "engine": {
+            "type": "string",
+            "enum": [
+              "chrome",
+              "brave",
+              "firefox",
+              "tor",
+              "edge"
+            ]
+          },
+          "pinned": {
+            "type": "boolean"
+          },
+          "agent": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "task": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "idle",
+              "running",
+              "complete",
+              "error"
+            ]
+          }
+        }
+      }
+    },
+    "monitoring_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "saved",
+        "archived"
+      ],
+      "default": "saved"
+    },
+    "last_session": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "OsintTimeline",
+  "type": "object",
+  "properties": {
+    "target_id": {
+      "type": "string"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "data_leak",
+        "social_post",
+        "domain_registration",
+        "breach",
+        "location_ping",
+        "phone_found",
+        "email_found",
+        "association",
+        "alert",
+        "manual"
+      ],
+      "default": "manual"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "data": {
+      "type": "object"
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
+    "event_type"
+  ]
+}

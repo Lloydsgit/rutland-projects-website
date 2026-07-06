@@ -1,0 +1,50 @@
+{
+  "name": "DossierLayer",
+  "type": "object",
+  "properties": {
+    "target_id": {
+      "type": "string"
+    },
+    "layer_number": {
+      "type": "number"
+    },
+    "layer_name": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "sources_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "running",
+        "complete",
+        "error"
+      ],
+      "default": "pending"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "target_id",
+    "layer_number",
+    "layer_name"
+  ]
+}

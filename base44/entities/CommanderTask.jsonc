@@ -1,0 +1,60 @@
+{
+  "name": "CommanderTask",
+  "type": "object",
+  "properties": {
+    "objective": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "synthesis",
+        "delegation",
+        "council"
+      ],
+      "default": "synthesis"
+    },
+    "perspectives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "response": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "final_verdict": {
+      "type": "string"
+    },
+    "sub_agents_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "running",
+        "complete",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "decision_log_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "objective"
+  ]
+}

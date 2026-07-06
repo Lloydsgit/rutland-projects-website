@@ -1,0 +1,78 @@
+{
+  "name": "DataFeed",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "rss",
+        "twitter",
+        "linkedin",
+        "reddit",
+        "osint",
+        "news_api",
+        "custom"
+      ],
+      "default": "rss"
+    },
+    "url": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "error"
+      ],
+      "default": "active"
+    },
+    "last_fetched": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "item_count": {
+      "type": "number",
+      "default": 0
+    },
+    "latest_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "published": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "assigned_agent": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "source_type"
+  ]
+}

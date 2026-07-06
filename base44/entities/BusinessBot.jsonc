@@ -1,0 +1,92 @@
+{
+  "name": "BusinessBot",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "n8n",
+        "zapier",
+        "make",
+        "slack",
+        "custom",
+        "multi"
+      ],
+      "default": "n8n"
+    },
+    "webhook_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "error",
+        "learning"
+      ],
+      "default": "active"
+    },
+    "revenue_target": {
+      "type": "number",
+      "default": 0
+    },
+    "revenue_generated": {
+      "type": "number",
+      "default": 0
+    },
+    "decisions_made": {
+      "type": "number",
+      "default": 0
+    },
+    "last_action": {
+      "type": "string"
+    },
+    "last_run": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "kpis": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "logs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "self_improve": {
+      "type": "boolean",
+      "default": true
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "lead_gen",
+        "content",
+        "sales",
+        "outreach",
+        "research",
+        "monitoring",
+        "finance"
+      ],
+      "default": "research"
+    }
+  },
+  "required": [
+    "name",
+    "goal"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "AgentSchedule",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "agent_task": {
+      "type": "string"
+    },
+    "cron_expression": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "hourly",
+        "daily",
+        "weekly",
+        "monthly",
+        "custom"
+      ],
+      "default": "daily"
+    },
+    "day_of_week": {

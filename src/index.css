@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Orbitron', 'Space Grotesk', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* IRIS — Blood Void Palette (Mark V Doctrine) */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 351 89% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 10% 8%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 5% 8%;
+    --muted-foreground: 0 0% 69%;
+    --accent: 0 10% 10%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 354 70% 35%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 5% 10%;
+    --input: 0 5% 10%;
+    --ring: 351 89% 42%;
+    --radius: 0.75rem;
+
+    /* IRIS Custom Tokens */
+    --void: 0 0% 0%;
+    --shirogane: 0 0% 69%;
+    --sky-cyan: 351 89% 42%;
+    --sumi: 0 0% 4%;
+    --amber-warn: 351 89% 42%;
+    --critical-red: 351 100% 50%;
+    --glass-edge: 0 0% 10%;
+
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 351 89% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 5% 8%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 5% 10%;
+    --sidebar-ring: 351 89% 42%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 351 89% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 10% 8%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 5% 8%;
+    --muted-foreground: 0 0% 69%;
+    --accent: 0 10% 10%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 354 70% 35%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 5% 10%;
+    --input: 0 5% 10%;
+    --ring: 351 89% 42%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 351 89% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 5% 8%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 5% 10%;
+    --sidebar-ring: 351 89% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    color: #ffffff;
+  }
+  /* All text white, icons inherit white */
+  p, span, h1, h2, h3, h4, h5, h6, label, button, input, textarea, select, li, a, div {
+    color: inherit;
+  }
+  svg {
+    color: inherit;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(351, 89%, 42%, 0.3); border-radius: 1px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(351, 89%, 42%, 0.5); }
+
+/* ATS override */
+:root.ats-active {
+  --primary: 351 100% 50%;
+  --ring: 351 100% 50%;
+  --border: 351 24% 14%;
+}
+
+/* MK-II Animations */
+@keyframes auroraShift {
+  0%, 100% { transform: translateX(-20%) translateY(-10%) rotate(0deg); opacity: 0.4; }
+  33% { transform: translateX(10%) translateY(5%) rotate(120deg); opacity: 0.6; }
+  66% { transform: translateX(-5%) translateY(15%) rotate(240deg); opacity: 0.35; }
+}
+
+@keyframes particleDrift {
+  0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-120px) translateX(30px); opacity: 0; }
+}
+
+@keyframes reactorBreath {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.04); }
+}
+
+@keyframes hairlineDraw {
+  from { transform: scaleX(0); transform-origin: left; }
+  to { transform: scaleX(1); }
+}
+
+@keyframes inkBleed {
+  from { opacity: 0; clip-path: inset(0 100% 0 0); }
+  to { opacity: 1; clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.018; }
+  50% { opacity: 0.035; }
+}
+
+/* Voice bubble animations */
+@keyframes bubbleIdle {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 60px rgba(200,16,46,0.2); }
+  50% { transform: scale(1.02); box-shadow: 0 0 80px rgba(200,16,46,0.3); }
+}
+
+@keyframes bubbleListening {
+  0% { box-shadow: 0 0 40px rgba(255,0,51,0.3); }
+  50% { box-shadow: 0 0 120px rgba(255,0,51,0.6), 0 0 200px rgba(255,0,51,0.2); }
+  100% { box-shadow: 0 0 40px rgba(255,0,51,0.3); }
+}
+
+@keyframes bubbleAlert {
+  0%, 100% { box-shadow: 0 0 60px rgba(255,0,51,0.4); }
+  50% { box-shadow: 0 0 140px rgba(255,0,51,0.8), 0 0 250px rgba(255,0,51,0.3); }
+}
+
+@keyframes rippleOut {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes scanLine {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(300%); }
+}
+
+@keyframes typingDot {
+  0%, 60%, 100% { opacity: 0.3; }
+  30% { opacity: 1; }
+}
+
+@keyframes spinParticles {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.aurora-field {
+  animation: auroraShift 18s ease-in-out infinite;
+}
+
+.particle-drift {
+  animation: particleDrift 6s ease-in-out infinite;
+}
+
+.reactor-breath {
+  animation: reactorBreath 3.2s ease-in-out infinite;
+}
+
+.hairline-draw {
+  animation: hairlineDraw 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.ink-bleed {
+  animation: inkBleed 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Glass surface */
+.glass {
+  backdrop-filter: blur(40px) saturate(180%) brightness(115%);
+  background: rgba(10,0,0,0.85);
+  border: 1px solid rgba(200,16,46,0.15);
+  box-shadow: 0 8px 64px rgba(0,0,0,0.35);
+}
+
+.glass-panel {
+  backdrop-filter: blur(24px) saturate(160%);
+  background: rgba(10,0,0,0.7);
+  border: 1px solid rgba(200,16,46,0.12);
+}
+
+/* Japanese hairline divider */
+.hairline {
+  height: 1px;
+  background: rgba(200,16,46,0.1);
+}
+
+/* Void background with holographic grid */
+.void-bg {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -5%, hsl(351 89% 42% / 0.08) 0%, transparent 55%),
+    #000000;
+}
+
+/* Hand cursor */
+#hand-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid hsl(351, 89%, 42%);
+  background: hsl(351, 89%, 42%, 0.12);
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.1s, height 0.1s, background 0.1s;
+  box-shadow: 0 0 12px hsl(351, 89%, 42%, 0.3);
+}
+#hand-cursor.grip {
+  width: 28px;
+  height: 28px;
+  background: hsl(351, 89%, 42%, 0.3);
+  box-shadow: 0 0 20px hsl(351, 89%, 42%, 0.5);
+}
+
+/* Voice bubble states */
+.voice-bubble-idle { animation: bubbleIdle 4s ease-in-out infinite; }
+.voice-bubble-listening { animation: bubbleListening 1.5s ease-in-out infinite; }
+.voice-bubble-alert { animation: bubbleAlert 0.5s ease-in-out infinite; }

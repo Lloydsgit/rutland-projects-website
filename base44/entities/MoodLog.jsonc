@@ -1,0 +1,43 @@
+{
+  "name": "MoodLog",
+  "type": "object",
+  "properties": {
+    "detected_state": {
+      "type": "string",
+      "enum": [
+        "energized",
+        "stressed",
+        "tired",
+        "neutral",
+        "celebrating",
+        "down",
+        "focused",
+        "anxious"
+      ],
+      "default": "neutral"
+    },
+    "confidence": {
+      "type": "number",
+      "default": 5,
+      "description": "1-10 detection confidence"
+    },
+    "trigger_message": {
+      "type": "string",
+      "description": "The message that triggered this mood detection"
+    },
+    "signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Detected signals: short_message, late_night, exclamation, question_heavy, etc."
+    },
+    "session_hour": {
+      "type": "number",
+      "description": "Hour of day (0-23) when detected"
+    }
+  },
+  "required": [
+    "detected_state"
+  ]
+}

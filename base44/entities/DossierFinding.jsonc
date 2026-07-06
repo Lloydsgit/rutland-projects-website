@@ -1,0 +1,41 @@
+{
+  "name": "DossierFinding",
+  "type": "object",
+  "properties": {
+    "target_id": {
+      "type": "string"
+    },
+    "layer": {
+      "type": "number"
+    },
+    "data_point": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "confidence": {
+      "type": "number",
+      "default": 5
+    },
+    "pivot_seeds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "target_id",
+    "layer",
+    "data_point",
+    "value"
+  ]
+}

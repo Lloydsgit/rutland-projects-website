@@ -1,0 +1,55 @@
+{
+  "name": "DecisionLog",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "1-10 confidence level"
+    },
+    "expected_outcome": {
+      "type": "string"
+    },
+    "actual_outcome": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "validated",
+        "invalidated",
+        "mixed"
+      ],
+      "default": "pending"
+    },
+    "review_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "business",
+        "content",
+        "personal",
+        "finance",
+        "strategy",
+        "tech"
+      ],
+      "default": "general"
+    }
+  },
+  "required": [
+    "title",
+    "decision"
+  ]
+}

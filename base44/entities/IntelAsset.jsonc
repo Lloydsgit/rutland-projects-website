@@ -1,0 +1,64 @@
+{
+  "name": "IntelAsset",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "document",
+        "profile",
+        "finding",
+        "image",
+        "link",
+        "note",
+        "credential"
+      ],
+      "default": "note"
+    },
+    "content": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "unclassified",
+        "confidential",
+        "secret",
+        "top_secret"
+      ],
+      "default": "confidential"
+    },
+    "pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "investigation_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}

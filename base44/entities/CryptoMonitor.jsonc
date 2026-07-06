@@ -1,0 +1,56 @@
+{
+  "name": "CryptoMonitor",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string"
+    },
+    "wallet_address": {
+      "type": "string"
+    },
+    "chain": {
+      "type": "string",
+      "enum": [
+        "ethereum",
+        "bitcoin",
+        "solana",
+        "polygon",
+        "bsc",
+        "other"
+      ],
+      "default": "ethereum"
+    },
+    "threshold_usd": {
+      "type": "number",
+      "default": 10000,
+      "description": "Alert if tx value exceeds this USD amount"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "archived"
+      ],
+      "default": "active"
+    },
+    "last_checked": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_tx_hash": {
+      "type": "string"
+    },
+    "total_alerts": {
+      "type": "number",
+      "default": 0
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "label",
+    "wallet_address"
+  ]
+}
